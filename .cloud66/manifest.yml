@@ -6,7 +6,7 @@ production:
             vendor: aws
             region: us-east-1
             size: t1.micro
-    mysql: 
+    postgresql: 
         server: 
             unique_name: Backend
             type: BYOC
