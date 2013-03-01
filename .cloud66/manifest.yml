@@ -13,5 +13,8 @@ production:
             vendor: aws
             region: us-east-1
             size: t1.micro
+            extra_packages: 
+                - atop
+                - chrony
     redis: 
         shared_server: Backend
