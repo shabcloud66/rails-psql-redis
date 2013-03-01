@@ -1,0 +1,17 @@
+production: 
+    rails: 
+        server: 
+            unique_name: Frontend
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro
+    mysql: 
+        server: 
+            unique_name: Backend
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro
+    redis: 
+        shared_server: Backend
