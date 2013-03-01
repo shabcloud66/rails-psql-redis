@@ -5,14 +5,14 @@ production:
             type: BYOC
             vendor: aws
             region: us-east-1
-            size: t1.micro
+            size: c1.medium
     postgresql: 
         server: 
             unique_name: Backend
             type: BYOC
             vendor: aws
             region: us-east-1
-            size: t1.micro
+            size: c1.medium
             extra_packages: 
                 - atop
                 - chrony
