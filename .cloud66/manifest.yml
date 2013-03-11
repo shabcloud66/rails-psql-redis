@@ -1,14 +1,14 @@
 production: 
     rails: 
         server: 
-            unique_name: Frontend
+            unique_name: Web
             type: BYOC
             vendor: aws
             region: us-east-1
             size: c1.medium
     postgresql: 
         server: 
-            unique_name: Backend
+            unique_name: Database
             type: BYOC
             vendor: aws
             region: us-east-1
@@ -17,4 +17,12 @@ production:
                 - atop
                 - chrony
     redis: 
-        shared_server: Backend
+        server: 
+            unique_name: Redis
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: c1.medium
+            extra_packages: 
+                - atop
+                - chrony
