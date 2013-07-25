@@ -1,7 +1,11 @@
-production: 
+development: 
     postgresql: 
         configuration:
-            postgis: true
+            postgis: "false"
+        configuration:
+            postgis: 
+                version: 1.2.3
+
 staging: 
     rails: 
         server: 
