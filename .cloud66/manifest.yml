@@ -1,4 +1,8 @@
 production: 
+    postgresql: 
+        configuration:
+            postgis: true
+staging: 
     rails: 
         server: 
             unique_name: Web
@@ -16,6 +20,8 @@ production:
             extra_packages: 
                 - atop
                 - chrony
+        configuration:
+            postgis: true
     redis: 
         server: 
             unique_name: Redis
