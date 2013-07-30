@@ -1,8 +1,8 @@
-development: 
+blah: 
     rails: 
         configuration:
             use_asset_pipeline: false
-production: 
+blah2: 
     postgresql: 
         configuration:
             postgis: true
