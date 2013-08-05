@@ -1,38 +1,24 @@
-development: 
-    rails: 
-        configuration:
-            use_asset_pipeline: false
 production: 
     postgresql: 
         configuration:
-            postgis: true
-staging: 
-    rails: 
-        server: 
-            unique_name: Web
-            type: BYOC
-            vendor: aws
-            region: us-east-1
-            size: c1.medium
-    postgresql: 
-        server: 
-            unique_name: Database
-            type: BYOC
-            vendor: aws
-            region: us-east-1
-            size: c1.medium
-            extra_packages: 
-                - atop
-                - chrony
-        configuration:
-            postgis: true
+            postgis: true 
     redis: 
         server: 
             unique_name: Redis
-            type: BYOC
-            vendor: aws
-            region: us-east-1
-            size: c1.medium
-            extra_packages: 
-                - atop
-                - chrony
+            type: BYOC      
+development: 
+    postgresql: 
+        configuration:
+            postgis: true 
+    redis: 
+        server: 
+            unique_name: Redis
+            type: BYOC                    
+staging: 
+    postgresql: 
+        configuration:
+            postgis: true 
+    redis: 
+        server: 
+            unique_name: Redis
+            type: BYOC        
