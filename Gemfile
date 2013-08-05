@@ -4,6 +4,7 @@ gem 'rails', '~>3.2'
 #ruby '1.9.3' --> trying to specify this in the manifest file now
 
 gem 'pg'
+gem 'puma'
 
 # Gems used only for assets and not required
 # in production environments by default.
