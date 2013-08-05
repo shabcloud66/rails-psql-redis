@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~>3.2'
-#ruby '1.9.3' --> trying to specify this in the manifest file now
+ruby '1.9.3'
 
 gem 'pg'
 gem 'puma'
