@@ -1,24 +1,34 @@
 production: 
     postgresql: 
         configuration:
+            unique_name: backend
             postgis: true 
     redis: 
         server: 
-            unique_name: Redis
-            type: BYOC      
+            unique_name: backend
+            type: BYOC        
+
 development: 
+    rails: 
+        server:
+            unique_name: shared_server
     postgresql: 
+        server:
+            unique_name: shared_server
         configuration:
             postgis: true 
     redis: 
         server: 
-            unique_name: Redis
-            type: BYOC                    
+            unique_name: shared_server
+            type: BYOC        
+
 staging: 
     postgresql: 
-        configuration:
+        server:
+            unique_name: backend
+        configuration:        
             postgis: true 
     redis: 
         server: 
-            unique_name: Redis
+            unique_name: backend
             type: BYOC        
