@@ -1,1 +1,1 @@
-select count(*)<>0 as result from balls
+select count(*)<>0 as result from buckets
