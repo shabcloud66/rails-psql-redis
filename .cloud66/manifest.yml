@@ -2,7 +2,11 @@ development:
     rails:
         servers:
             server: 
-                same_as: single_server
+                unique_name: single_server
+                vendor: aws
+                region: us-east-1
+                size: t1.micro
+
     postgresql: 
         servers:
             server: 
