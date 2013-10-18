@@ -2,18 +2,18 @@ production:
   rails: 
     servers: 
       - server: 
-        unique_name: kontextual_frontend 
+          unique_name: kontextual_frontend 
     configuration: 
       ruby_version: 2.0.0 
       use_asset_pipeline: true 
   postgresql: 
     servers: 
       - server: 
-        unique_name: kontextual_backend 
+          unique_name: kontextual_backend 
   redis: 
     servers: 
       - server: 
-        same_as: kontextual_backend
+          same_as: kontextual_backend
 staging: 
     rails:
         servers:
