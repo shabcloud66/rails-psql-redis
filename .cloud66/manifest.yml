@@ -1,16 +1,19 @@
-development: 
-    rails:
-        servers:
-            server: 
-                same_as: single_server
-    postgresql: 
-        servers:
-            server: 
-                same_as: single_server
-    redis: 
-        servers:
-            server: 
-                unique_name: single_server
+production:
+  rails: 
+    servers: 
+      - server: 
+        unique_name: kontextual_frontend 
+    configuration: 
+      ruby_version: 2.0.0 
+      use_asset_pipeline: true 
+  postgresql: 
+    servers: 
+      - server: 
+        unique_name: kontextual_backend 
+  redis: 
+    servers: 
+      - server: 
+        same_as: kontextual_backend
 staging: 
     rails:
         servers:
