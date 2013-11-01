@@ -13,30 +13,4 @@ development:
     redis: 
         servers:
             - server: 
-                same_as: kontextual_backend                
-staging: 
-    rails:
-        servers:
-            server: 
-                unique_name: frontend
-    postgresql: 
-        servers:
-            server: 
-                same_as: backend
-    redis: 
-        servers:
-            server: 
-                unique_name: backend
-production: 
-    rails:
-        servers:
-            server: 
-                unique_name: rails
-    postgresql: 
-        servers:
-            server: 
-                unique_name: pg
-    redis: 
-        servers:
-            server: 
-                unique_name: redis
+                unique_name: tjo
