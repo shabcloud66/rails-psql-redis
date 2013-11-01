@@ -8,14 +8,14 @@ development:
             size: t1.micro
     postgresql:
         server:
-            unique_name: frontend
+            unique_name: tja
             type: BYOC
             vendor: aws
             region: us-east-1
             size: t1.micro 
     redis:
         server:
-            unique_name: frontend
+            unique_name: tja2
             type: BYOC
             vendor: aws
             region: us-east-1
