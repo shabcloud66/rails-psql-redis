@@ -19,7 +19,7 @@ development:
   postgresql:
     servers:
     - server: 
-      unique_name: tja
+        unique_name: tja
     configuration:
         postgis:
            version: 2.0.3
@@ -28,7 +28,7 @@ development:
   redis:
     servers:
     - server: 
-      unique_name: hej
+        unique_name: hej
     configuration:
         version: 2.6.10
   mongodb:
@@ -37,10 +37,9 @@ development:
   mysql:
     servers:
     - server: external   
-    
   memcached:
     shared_group: tja
     configuration:
-      memory: 1024
-      port: 11215
-      listen_ip: 127.0.0.1    
+        memory: 1024
+        port: 11215
+        listen_ip: 127.0.0.1    
