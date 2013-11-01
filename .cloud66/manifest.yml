@@ -7,15 +7,40 @@ development:
         address: 123.123.123.123
         username: ubuntu
         ssh_key_name: tja
+    configuration:
+        ruby_version: 1.9.3
+        use_asset_pipeline: true
+        do_initialdb_schema_load: false
+        reserved_server_memory: 0 (default value)
+        passenger_process_memory: 200 (default value)
+        nginx:
+            cors: true
+            perfect_forward_secrecy: true        
   postgresql:
     servers:
-    - server: external
+    - server: 
+      unique_name: tja
+    configuration:
+        postgis:
+           version: 2.0.3
+        geos:
+           version: 3.3.8      
   redis:
     servers:
-    - server: external    
+    - server: 
+      unique_name: hej
+    configuration:
+        version: 2.6.10
   mongodb:
     servers:
     - server: external 
   mysql:
     servers:
-    - server: external    
+    - server: external   
+    
+  memcached:
+    shared_group: tja
+    configuration:
+      memory: 1024
+      port: 11215
+      listen_ip: 127.0.0.1    
