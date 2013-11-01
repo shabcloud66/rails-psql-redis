@@ -8,9 +8,4 @@ development:
             use_asset_pipeline: true
     postgresql: 
         servers:
-            - server: 
-                unique_name: kontextual_backend
-    redis: 
-        servers:
-            - server: 
-                unique_name: tjo
+            - server: external
