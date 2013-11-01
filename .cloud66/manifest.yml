@@ -6,3 +6,17 @@ development:
             vendor: aws
             region: us-east-1
             size: t1.micro
+    postgresql:
+        server:
+            unique_name: frontend
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro 
+    redis:
+        server:
+            unique_name: frontend
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro            
