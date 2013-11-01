@@ -9,3 +9,6 @@ development:
     postgresql: 
         servers:
             - server: external
+    redis: 
+        servers:
+            - server: external            
