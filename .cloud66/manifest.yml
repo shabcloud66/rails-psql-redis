@@ -15,4 +15,7 @@ development:
     - server: external    
   mongodb:
     servers:
-    - server: external  
+    - server: external 
+  mysql:
+    servers:
+    - server: external    
