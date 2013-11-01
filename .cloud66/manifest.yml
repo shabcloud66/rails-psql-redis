@@ -1,7 +1,6 @@
 development:
   rails:
-    servers:
-    - server:
+    server:
         unique_name: frontend
         type: BYOS
         address: 123.123.123.123
@@ -17,8 +16,7 @@ development:
             cors: true
             perfect_forward_secrecy: true        
   postgresql:
-    servers:
-    - server: 
+    server:
         unique_name: tja
     configuration:
         postgis:
@@ -26,20 +24,11 @@ development:
         geos:
            version: 3.3.8      
   redis:
-    servers:
-    - server: 
+    server:
         unique_name: hej
     configuration:
         version: 2.6.10
   mongodb:
-    servers:
-    - server: external 
+    server: external
   mysql:
-    servers:
-    - server: external   
-  memcached:
-    shared_group: tja
-    configuration:
-        memory: 1024
-        port: 11215
-        listen_ip: 127.0.0.1    
+    server: external
