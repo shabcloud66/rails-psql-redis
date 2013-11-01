@@ -1,8 +1,8 @@
 development:
-  rails:
-    server:
-        unique_name: frontend
-  postgresql:
-    shared_server: frontend  
-  redis:
-    shared_server: frontend      
+    rails:
+        server:
+            unique_name: frontend
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro
