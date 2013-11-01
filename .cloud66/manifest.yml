@@ -3,4 +3,4 @@ development:
     server:
         unique_name: frontend
   postgresql:
-        shared_server: frontend  
+    shared_server: frontend  
