@@ -1,10 +1,68 @@
+production:
+    rails:
+        server:
+            unique_name: frontend
+            extra_packages:
+                - atop
+                - chrony
+        configuration:
+            ruby_version: 1.9.3
+            use_asset_pipeline: true
+            do_initialdb_schema_load: false
+            reserved_server_memory: 0
+            passenger_process_memory: 200
+            nginx:
+                cors: true
+                    origin: '*'
+                    methods: 'GET, OPTION'
+                perfect_forward_secrecy: true                
+    postgresql:
+        server:
+            unique_name: backend
+            extra_packages:
+                - chrony
+        configuration:
+           version: 9.2.3
+           postgis:
+               version: 2.0.3
+           geos:
+               version: 3.3.8
+    redis:
+        server:
+            unique_name: redis
+        configuration:
+            version: 2.6.10   
 development:
     rails:
         server:
             unique_name: frontend
-            vendor: aws
-            region: us-east-1
-            size: t1.micro
+            extra_packages:
+                - atop
+                - chrony
+        configuration:
+            ruby_version: 1.9.3
+            use_asset_pipeline: true
+            do_initialdb_schema_load: false
+            reserved_server_memory: 0
+            passenger_process_memory: 200
+            nginx:
+                cors: true
+                    origin: '*'
+                    methods: 'GET, OPTION'
+                perfect_forward_secrecy: true                
+    postgresql:
+        server:
+            unique_name: backend
+            extra_packages:
+                - chrony
+        configuration:
+           version: 9.2.3
+           postgis:
+               version: 2.0.3
+           geos:
+               version: 3.3.8
     redis:
-        server: 
-            same_as: frontend
+        server:
+            unique_name: redis
+        configuration:
+            version: 2.6.10                           
