@@ -12,7 +12,7 @@ production:
             reserved_server_memory: 0
             passenger_process_memory: 200
             nginx:
-                cors: true
+                cors:
                     origin: '*'
                     methods: 'GET, OPTION'
                 perfect_forward_secrecy: true                
@@ -46,7 +46,7 @@ development:
             reserved_server_memory: 0
             passenger_process_memory: 200
             nginx:
-                cors: true
+                cors:
                     origin: '*'
                     methods: 'GET, OPTION'
                 perfect_forward_secrecy: true                
