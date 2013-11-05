@@ -2,6 +2,10 @@ production:
     rails:
         server:
             unique_name: frontend
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro
             extra_packages:
                 - atop
                 - chrony
@@ -19,6 +23,10 @@ production:
     postgresql:
         server:
             unique_name: backend
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro
             extra_packages:
                 - chrony
         configuration:
@@ -30,12 +38,20 @@ production:
     redis:
         server:
             unique_name: redis
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro
         configuration:
             version: 2.6.10   
 development:
     rails:
         server:
             unique_name: frontend
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro
             extra_packages:
                 - atop
                 - chrony
@@ -53,6 +69,10 @@ development:
     postgresql:
         server:
             unique_name: backend
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro
             extra_packages:
                 - chrony
         configuration:
@@ -64,5 +84,9 @@ development:
     redis:
         server:
             unique_name: redis
+            type: BYOC
+            vendor: aws
+            region: us-east-1
+            size: t1.micro
         configuration:
-            version: 2.6.10                           
+            version: 2.6.10
