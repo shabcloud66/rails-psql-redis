@@ -1,7 +1,8 @@
 production: 
     postgresql: 
-        configuration:
+        server:
             unique_name: backend
+        configuration:
             postgis: true 
     redis: 
         server: 
