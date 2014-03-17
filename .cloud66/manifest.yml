@@ -31,3 +31,24 @@ production:
             vendor: aws
             region: sa-east-1
             size: t1.micro
+staging:
+    rails:
+        servers:
+            server: 
+                unique_name: server1
+                type: BYOC
+                vendor: aws
+                region: sa-east-1
+                size: t1.micro
+    mongodb:
+        server: 
+            shared_server: server1
+    postgresql:
+        server:
+            shared_server: server1  
+        configuration:
+            version: 9.2.3
+            postgis: true
+    redis:
+        server:
+            shared_server: server1
