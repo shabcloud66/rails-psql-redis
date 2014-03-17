@@ -15,22 +15,9 @@ production:
             region: sa-east-1
             size: t1.micro
     postgresql:
-        server:
-            unique_name: postgresql    
-            type: BYOC
-            vendor: aws
-            region: sa-east-1
-            size: t1.micro     
-        configuration:
-            version: 9.2.3
-            postgis: true
+        server: external
     redis:
-        server:
-            unique_name: redis
-            type: BYOC
-            vendor: aws
-            region: sa-east-1
-            size: t1.micro
+        server: external
 staging:
     rails:
         servers:
