@@ -1,55 +1,36 @@
-production:
-    rails:
-        servers:
-            server: 
-                unique_name: frontend1
-                type: BYOC
-                vendor: aws
-                region: sa-east-1a
-                size: t1.micro
-            server: 
-                unique_name: frontend2
-                type: BYOC
-                vendor: aws
-                region: sa-east-1b
-                size: t1.micro     
-            server: 
-                unique_name: process1
-                type: BYOC
-                vendor: aws
-                region: sa-east-1
-                size: t1.micro
-            configuration:
-                asset_pipeline_precompile: false
-            server: 
-                unique_name: process2
-                type: BYOC
-                vendor: aws
-                region: sa-east-1
-                size: t1.micro    
-             configuration:
-                asset_pipeline_precompile: false
-    mongodb:
-        server: 
-                unique_name: mongodb     
-                type: BYOC
-                vendor: aws
-                region: sa-east-1a
-                size: t1.micro
-    postgresql:
-        server:
-            unique_name: postgresql    
-            type: BYOC
-            vendor: aws
-            region: sa-east-1
-            size: t1.micro     
-        configuration:
-            version: 9.2.3
-            postgis: true
-    redis:
-        server:
-            unique_name: redis
-            type: BYOC
-            vendor: aws
-            region: sa-east-1
-            size: t1.micro   
+--- 
+production: 
+  mongodb: 
+    server: 
+      region: sa-east-1a
+      size: t1.micro
+      type: BYOC
+      unique_name: mongodb
+      vendor: aws
+  postgresql: 
+    configuration: 
+      postgis: true
+      version: "9.2.3"
+    server: 
+      region: sa-east-1
+      size: t1.micro
+      type: BYOC
+      unique_name: postgresql
+      vendor: aws
+  rails: 
+    servers: 
+      configuration: 
+        asset_pipeline_precompile: false
+      server: 
+        region: sa-east-1
+        size: t1.micro
+        type: BYOC
+        unique_name: process2
+        vendor: aws
+  redis: 
+    server: 
+      region: sa-east-1
+      size: t1.micro
+      type: BYOC
+      unique_name: redis
+      vendor: aws
