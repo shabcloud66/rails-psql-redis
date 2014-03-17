@@ -1,35 +1,55 @@
-production: 
-    rails: 
-        server:
-            unique_name: frontend
-    postgresql: 
-        server:
-            unique_name: backend-pg
-    redis: 
+production:
+    rails:
+        servers:
+            server: 
+                unique_name: frontend1
+                type: BYOC
+                vendor: aws
+                region: sa-east-1a
+                size: t1.micro
+            server: 
+                unique_name: frontend2
+                type: BYOC
+                vendor: aws
+                region: sa-east-1b
+                size: t1.micro     
+            server: 
+                unique_name: process1
+                type: BYOC
+                vendor: aws
+                region: sa-east-1
+                size: t1.micro
+            configuration:
+                asset_pipeline_precompile: false
+            server: 
+                unique_name: process2
+                type: BYOC
+                vendor: aws
+                region: sa-east-1
+                size: t1.micro    
+             configuration:
+                asset_pipeline_precompile: false
+    mongodb:
         server: 
-            unique_name: backend-redis
-
-development: 
-    rails: 
+                unique_name: mongodb     
+                type: BYOC
+                vendor: aws
+                region: sa-east-1a
+                size: t1.micro
+    postgresql:
         server:
-            unique_name: shared_server
-    postgresql: 
-        server:
-            unique_name: shared_server
+            unique_name: postgresql    
+            type: BYOC
+            vendor: aws
+            region: sa-east-1
+            size: t1.micro     
         configuration:
-            postgis: true 
-    redis: 
-        server: 
-            unique_name: shared_server
-            type: BYOC        
-
-staging: 
-    postgresql: 
+            version: 9.2.3
+            postgis: true
+    redis:
         server:
-            unique_name: backend
-        configuration:        
-            postgis: true 
-    redis: 
-        server: 
-            unique_name: backend
-            type: BYOC        
+            unique_name: redis
+            type: BYOC
+            vendor: aws
+            region: sa-east-1
+            size: t1.micro   
