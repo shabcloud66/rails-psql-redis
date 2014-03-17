@@ -7,16 +7,12 @@ production:
                 vendor: aws
                 region: sa-east-1
                 size: t1.micro
-            configuration:
-                ruby_version: 1.9.3
             server: 
                 unique_name: frontend2
                 type: BYOC
                 vendor: aws
                 region: sa-east-1
                 size: t1.micro     
-            configuration:
-                ruby_version: 1.9.3                
             server: 
                 unique_name: process1
                 type: BYOC
@@ -24,7 +20,7 @@ production:
                 region: sa-east-1
                 size: t1.micro
             configuration:
-                asset_pipeline_precompile: false             
+                asset_pipeline_precompile: false
             server: 
                 unique_name: process2
                 type: BYOC
