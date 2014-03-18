@@ -9,7 +9,7 @@ production:
         server: 
             unique_name: backend-redis
     memcached:
-        shared_group: backend-redis
+        shared_group: redis
 
 development: 
     rails: 
@@ -25,7 +25,7 @@ development:
             unique_name: shared_server
             type: BYOC        
     memcached:
-        shared_group: backend-redis
+        shared_group: redis
 staging: 
     postgresql: 
         server:
@@ -37,4 +37,4 @@ staging:
             unique_name: backend
             type: BYOC
     memcached:
-        shared_group: backend-redis            
+        shared_group: redis            
