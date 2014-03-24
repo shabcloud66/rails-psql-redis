@@ -5,6 +5,10 @@ production:
     postgresql: 
         server:
             unique_name: backend-pg
+        configuration:
+            version: 9.3.4
+            postgis:
+            version: 2.0.4    
     redis: 
         server: 
             unique_name: backend-redis
