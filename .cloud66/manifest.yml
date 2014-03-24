@@ -2,9 +2,8 @@ production:
     rails: 
         server:
             unique_name: frontend
-    postgresql:
-        postgresql:
-            version: 9.3.4
+    postgresql: 
+        version: 9.3.4
         geos:
             version: 3.4.2
         postgis:
