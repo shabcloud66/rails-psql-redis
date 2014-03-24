@@ -2,12 +2,15 @@ production:
     rails: 
         server:
             unique_name: frontend
-    postgresql: 
-        version: 9.3.4
-        geos:
-            version: 3.4.2
-        postgis:
-            version: 2.1.1 
+    postgresql:
+       server: 
+            unique_name: postgresql
+       configuration:
+           version: 9.3.4
+           postgis:
+               version: 2.1.1
+           geos:
+               version: 3.4.2
     redis: 
         server: 
             unique_name: backend-redis
