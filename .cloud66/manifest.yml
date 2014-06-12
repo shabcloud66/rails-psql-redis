@@ -11,7 +11,7 @@ production:
 development: 
     rails: 
         server:
-            unique_name: shared_server
+            unique_name: backend-pg
     postgresql: 
         server:
             unique_name: shared_server
@@ -19,15 +19,15 @@ development:
             postgis: true 
     redis: 
         server: 
-            unique_name: shared_server
+            unique_name: backend-redis
             type: BYOC        
 staging: 
     postgresql: 
         server:
-            unique_name: backend
+            unique_name: backend-pg
         configuration:        
             postgis: true 
     redis: 
         server: 
-            unique_name: backend
+            unique_name: backend-redis
             type: BYOC        
