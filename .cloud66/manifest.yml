@@ -11,10 +11,10 @@ production:
 development: 
     rails: 
         server:
-            unique_name: backend-pg
+            unique_name: frontend
     postgresql: 
         server:
-            unique_name: shared_server
+            unique_name: backend-pg
         configuration:
             postgis: true 
     redis: 
