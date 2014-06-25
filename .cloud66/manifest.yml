@@ -1,0 +1,14 @@
+staging: # 1. Environment type
+  rails: # 2. Application type
+    servers:
+      server: # 3. Server type (optional)
+        unique_name: web
+        vendor: aws
+        region: us-east-1
+        size: t1.micro
+  redis:
+    servers:
+      server: external
+  postgresql:
+    servers:
+      server: external
