@@ -1,42 +1,26 @@
-development: 
-    rails:
-        servers:
-            - server: 
-                unique_name: kontextual_frontend
-        configuration:
-            ruby_version: 2.0.0
-            use_asset_pipeline: true
-    postgresql: 
-        servers:
-            - server: 
-                unique_name: kontextual_backend
-    redis: 
-        servers:
-            - server: 
-                same_as: kontextual_backend                
-staging: 
-    rails:
-        servers:
-            server: 
-                unique_name: frontend
-    postgresql: 
-        servers:
-            server: 
-                same_as: backend
-    redis: 
-        servers:
-            server: 
-                unique_name: backend
-production: 
-    rails:
-        servers:
-            server: 
-                unique_name: rails
-    postgresql: 
-        servers:
-            server: 
-                unique_name: pg
-    redis: 
-        servers:
-            server: 
-                unique_name: redis
+staging: # 1. Environment type
+  rails: # 2. Application type
+    servers:
+      server: # 3. Server type (optional)
+        vendor: digitalocean
+        size: 64
+        region: 4
+        unique_name: web
+  redis:
+    servers:
+      server:
+        vendor: digitalocean
+        size: 62
+        region: 4
+        unique_name: redis
+  postgresql:
+    servers:
+      server:
+        vendor: digitalocean
+        size: 65
+        region: 4
+        unique_name: db
+  memcached:
+    shared_group: web 
+    configuration:
+      memory: 1024
