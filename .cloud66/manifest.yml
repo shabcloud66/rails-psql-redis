@@ -1,0 +1,28 @@
+production:
+  rails:
+    servers:
+      server:
+        unique_name: frontend
+        extra_packages:
+          - libsndfile-dev
+          - libmp3lame-dev
+    configuration:
+      ruby_version: 2.1.5
+      asset_pipeline_precompile: true
+      do_initial_db_schema_load: true
+  redis:
+    servers:
+      server:
+        unique_name: hugo
+        vendor: digitalocean
+        region: 3
+        size: 62
+    configuration:
+      version: 2.6.10
+  postgresql:
+    servers:
+      server:
+        same_as: hugo
+    configuration:
+      version: 9.3.4
+      postgis: true
