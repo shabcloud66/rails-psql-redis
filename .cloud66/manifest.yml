@@ -3,10 +3,10 @@ production:
     servers:
       server:
         unique_name: frontend
-        extra_packages:
-          - libsndfile-dev
-          - libmp3lame-dev
     configuration:
+      extra_packages:
+        - libsndfile-dev
+        - libmp3lame-dev
       ruby_version: 2.1.5
       asset_pipeline_precompile: true
       do_initial_db_schema_load: true
