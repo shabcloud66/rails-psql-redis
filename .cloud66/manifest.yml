@@ -1,26 +1,22 @@
-staging: # 1. Environment type
-  rails: # 2. Application type
-    servers:
-      server: # 3. Server type (optional)
-        vendor: digitalocean
-        size: 64
-        region: 4
-        unique_name: web
-  redis:
-    servers:
-      server:
-        vendor: digitalocean
-        size: 62
-        region: 4
-        unique_name: redis
-  postgresql:
-    servers:
-      server:
-        vendor: digitalocean
-        size: 65
-        region: 4
-        unique_name: db
-  memcached:
-    shared_group: web 
-    configuration:
-      memory: 1024
+production:
+    rails:
+        server:
+            unique_name: app
+            vendor: aws
+            region: us-east-1
+            size: m3.medium
+            root_disk_size: 30
+    postgresql:
+        server:
+            unique_name: db
+            vendor: aws
+            region: us-east-1
+            size: m3.medium
+            root_disk_size: 100
+    redis:
+        server:
+            unique_name: redis
+            vendor: aws
+            region: us-east-1
+            size: m3.medium
+            root_disk_size: 30
