@@ -7,9 +7,9 @@ production:
             size: m3.medium
             root_disk_size: 30
 	    configuration:            
-            nginx:
-                perfect_forward_secrecy: true
-    postgresql:
+                nginx:
+                    perfect_forward_secrecy: true
+    mysql:
         server:
             unique_name: db
             vendor: aws
