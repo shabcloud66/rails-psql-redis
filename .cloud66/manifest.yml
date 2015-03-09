@@ -6,7 +6,10 @@ production:
             region: us-east-1
             size: m3.medium
             root_disk_size: 30
-    postgresql:
+	    configuration:            
+            nginx:
+                perfect_forward_secrecy: true
+    mysql:
         server:
             unique_name: db
             vendor: aws
