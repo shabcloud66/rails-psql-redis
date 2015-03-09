@@ -9,7 +9,7 @@ production:
 	    configuration:            
             nginx:
                 perfect_forward_secrecy: true
-    mysql:
+    postgresql:
         server:
             unique_name: db
             vendor: aws
