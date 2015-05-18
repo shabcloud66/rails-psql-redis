@@ -1,0 +1,16 @@
+production:
+    postgresql:
+        server: external
+    rails:
+        server:
+            unique_name: web
+            subnet_id: subnet-123a0c28
+        configuration:
+            vpc_id: vpc-d595bfb0
+            ruby_version: 2.1.5
+    redis:
+        server:
+            unique_name: redis
+            subnet_id: subnet-123a0c28
+        configuration:
+            vpc_id: vpc-d595bfb0
