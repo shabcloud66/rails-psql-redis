@@ -7,7 +7,7 @@ production:
     server:
       unique_name: combined
       vendor: aws
-      key_name: default
+      key_name: Default
       region: ap-southeast-2
       size: t2.medium
       root_disk_size: 20
